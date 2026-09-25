@@ -119,6 +119,8 @@
         .summary article { padding: 24px; }
         .policy-section { padding: 25px 23px 30px; }
         .site-footer .shell { display: block; }
+        .site-footer span { display: block; }
+        .site-footer span + span { margin-top: 8px; }
       }
       @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .contact-link:hover { transform: none; } }
     </style>
@@ -148,8 +150,8 @@
 
         <div class="summary" aria-label="Privacy summary">
           <article><span class="number">01 / HABITS</span><h2>Your habit data</h2><p>Stored on your device and synced to your private iCloud database when iCloud is available.</p></article>
-          <article><span class="number">02 / ANALYTICS</span><h2>App launches</h2><p>PostHog receives an app launch event to help us understand app use.</p></article>
-          <article><span class="number">03 / DIAGNOSTICS</span><h2>Errors and performance</h2><p>Sentry receives crash, error, log, and performance information to help us fix problems.</p></article>
+          <article><span class="number">02 / ANALYTICS</span><h2>App launches</h2><p>A third-party analytics service receives an app launch event to help us understand app use.</p></article>
+          <article><span class="number">03 / DIAGNOSTICS</span><h2>Errors and performance</h2><p>A third-party diagnostics service receives crash, error, log, and performance information to help us fix problems.</p></article>
         </div>
 
         <div class="body-layout">
@@ -175,27 +177,27 @@
             <section class="policy-section" id="providers">
               <span class="section-number">02</span>
               <h2>Services we use</h2>
-              <h3>PostHog analytics</h3>
-              <p>In the production app, PostHog receives an <code>app_launched</code> event with the app environment. The event also carries information normally added by the PostHog SDK, such as an SDK-generated identifier, event time, and app or device details. We use this to understand app launches. Fupori does not intentionally send habit names or completion history to PostHog. Automatic screen capture, control capture, and session replay are disabled.</p>
-              <h3>Sentry diagnostics</h3>
-              <p>Sentry receives error and crash reports, logs, performance traces, and profiling data so we can diagnose problems. Reports can include device and app details, an IP address, and information contained in error messages or logs. Because the app currently enables Sentry's default personal information setting, diagnostic reports may contain personal information.</p>
+              <h3>App analytics</h3>
+              <p>In the production app, a third-party analytics service receives an app launch event with the app environment. Its software may also add an identifier, event time, and app or device details. We use this to understand app launches. Fupori does not intentionally send habit names or completion history to this service. Automatic screen capture, control capture, and session replay are disabled.</p>
+              <h3>Error and performance diagnostics</h3>
+              <p>A third-party diagnostics service receives error and crash reports, logs, performance traces, and profiling data so we can diagnose problems. Reports can include device and app details, an IP address, and information contained in error messages or logs. Diagnostic reports may contain personal information.</p>
               <h3>Apple iCloud</h3>
               <p>CloudKit handles sync for the app's private iCloud data. You can use Fupori without an app account; iCloud sync depends on your device's Apple Account and iCloud settings.</p>
-              <p>These providers process data for the purposes described above. You can read <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>, <a href="https://posthog.com/privacy">PostHog's privacy policy</a>, and <a href="https://sentry.io/privacy/">Sentry's privacy policy</a> for information about their practices.</p>
+              <p>Our analytics and diagnostics providers process information for the purposes described above. You can read <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a> for information about iCloud.</p>
             </section>
 
             <section class="policy-section" id="choices">
               <span class="section-number">03</span>
               <h2>Your choices</h2>
               <p>You can edit or delete habits in Fupori. You can turn off habit reminders in the app or change notification permission in iOS Settings. You can manage Fupori's iCloud access in your device's iCloud settings.</p>
-              <p>The current app has no in-app switch for PostHog analytics or Sentry diagnostics. To stop new data from being sent by the app, stop using it or remove it from your device. If you have a privacy request about data already sent, use the contact link below.</p>
+              <p>The current app has no in-app switch for analytics or diagnostics. To stop new data from being sent by the app, stop using it or remove it from your device. If you have a privacy request about data already sent, use the contact link below.</p>
             </section>
 
             <section class="policy-section" id="retention">
               <span class="section-number">04</span>
               <h2>Retention and deletion</h2>
               <p>Removing Fupori deletes its local app data from that device. If you used iCloud sync, copies can remain in your private iCloud storage and on your other devices. You can manage that storage through your Apple Account's iCloud settings.</p>
-              <p>PostHog and Sentry keep information according to the settings of the services we use and their applicable retention policies. Contact us to ask about access to or deletion of information held through those services. We may need enough information to find the relevant records, and some requests may be limited by what can be identified or by legal requirements.</p>
+              <p>Our analytics and diagnostics providers keep information according to their service settings and applicable retention policies. Contact us to ask about access to or deletion of information held through those services. We may need enough information to find the relevant records, and some requests may be limited by what can be identified or by legal requirements.</p>
             </section>
 
             <section class="policy-section" id="website">
@@ -207,10 +209,10 @@
             <section class="policy-section" id="contact">
               <span class="section-number">06</span>
               <h2>Contact and updates</h2>
-              <p>For a privacy question or request, open a GitHub issue. Issues are public, so please share only a short description and no habit content, device identifiers, or other personal information. We can arrange a private way to continue if needed.</p>
-              <a class="contact-link" href="https://github.com/AnastasiiaKhmelevskaia/fupori-privacy/issues/new">Contact Fupori on GitHub <span aria-hidden="true">↗</span></a>
+              <p>For a privacy question, access request, or deletion request, email us at the address below.</p>
+              <a class="contact-link" href="mailto:anastasiakhmelevskaia@gmail.com">anastasiakhmelevskaia@gmail.com <span aria-hidden="true">↗</span></a>
               <p>We may update this policy when the app or its data practices change. The date at the top shows when this page was last revised.</p>
-              <div class="callout"><p>If you are reporting a bug, please do not include personal habit data in a public issue.</p></div>
+              <div class="callout"><p>If you are reporting a bug, please avoid including personal habit data or other sensitive details unless they are needed to understand the problem.</p></div>
             </section>
           </div>
         </div>

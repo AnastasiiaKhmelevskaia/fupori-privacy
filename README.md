@@ -7,7 +7,7 @@ repository root, with no build tools or dependencies.
 
 Edit `index.html` when Fupori's data practices change. Check that the published
 page and App Store Connect privacy answers match the current app. The contact
-link relies on issues being enabled for this repository.
+link opens an email to the address listed in the policy.
 
 Add the live URL to the app's Privacy Policy URL field in App Store Connect and
 link to it from the app's settings.
