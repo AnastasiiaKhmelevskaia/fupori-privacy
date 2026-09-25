@@ -1,16 +1,13 @@
 # Fupori privacy policy
 
-Static privacy policy for Fupori. No build tools or dependencies are needed.
+Live policy: https://anastasiiakhmelevskaia.github.io/fupori-privacy/
 
-## Publish with GitHub Pages
+This is a static HTML page. GitHub Pages publishes the `main` branch from the
+repository root, with no build tools or dependencies.
 
-1. Create a **public** GitHub repository named `fupori-privacy` under `AnastasiiaKhmelevskaia`.
-2. Push this directory's `main` branch to that repository.
-3. In **Settings → Pages**, select **Deploy from a branch**, then `main` and `/(root)`.
-4. Once GitHub Pages reports a successful deployment, verify that
-   `https://anastasiiaKhmelevskaia.github.io/fupori-privacy/` loads the policy.
-5. Use that URL for the app's Privacy Policy URL in App Store Connect and add a
-   link to it in the app's settings.
+Edit `index.html` when Fupori's data practices change. Check that the published
+page and App Store Connect privacy answers match the current app. The contact
+link relies on issues being enabled for this repository.
 
-The contact link in `index.html` expects issues to be enabled for the repository.
-Review the policy and update it whenever Fupori's data practices change.
+Add the live URL to the app's Privacy Policy URL field in App Store Connect and
+link to it from the app's settings.
