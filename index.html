@@ -181,7 +181,7 @@
               <span class="section-number">02</span>
               <h2>Services we use</h2>
               <h3>PostHog analytics</h3>
-              <p>In the production app, PostHog receives an <code>app_launched</code> event with the app environment. The event also carries information normally added by the PostHog SDK, such as an anonymous installation identifier, event time, and app or device details. We use this to understand app launches. Fupori does not intentionally send habit names or completion history to PostHog. Automatic screen capture, control capture, and session replay are disabled.</p>
+              <p>In the production app, PostHog receives an <code>app_launched</code> event with the app environment. The event also carries information normally added by the PostHog SDK, such as an SDK-generated identifier, event time, and app or device details. We use this to understand app launches. Fupori does not intentionally send habit names or completion history to PostHog. Automatic screen capture, control capture, and session replay are disabled.</p>
               <h3>Sentry diagnostics</h3>
               <p>Sentry receives error and crash reports, logs, performance traces, and profiling data so we can diagnose problems. Reports can include device and app details, an IP address, and information contained in error messages or logs. Because the app currently enables Sentry's default personal information setting, diagnostic reports may contain personal information.</p>
               <h3>Apple iCloud</h3>
