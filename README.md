@@ -1,8 +1,9 @@
-# Fupori privacy policy
+# Fupori website
 
-Live policy: https://anastasiiakhmelevskaia.github.io/fupori-privacy/
+- About Fupori: https://anastasiiakhmelevskaia.github.io/fupori-privacy/about.html
+- Privacy policy: https://anastasiiakhmelevskaia.github.io/fupori-privacy/
 
-This is a static HTML page. GitHub Pages publishes the `main` branch from the
+These are static HTML pages. GitHub Pages publishes the `main` branch from the
 repository root, with no build tools or dependencies.
 
 Edit `index.html` when Fupori's data practices change. Check that the published

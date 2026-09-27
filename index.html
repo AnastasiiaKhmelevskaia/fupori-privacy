@@ -23,6 +23,8 @@
         --accent-border: #c96b18;
         --green: #5d8a63;
         --green-border: #3f6847;
+        --link: #3f6847;
+        --link-hover: #c96b18;
         --yellow: #f6c445;
         --chip: #fff0d7;
         --habit-card: #fff0c8;
@@ -34,8 +36,8 @@
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body { margin: 0; background: var(--background); }
-      a { color: var(--green-border); text-underline-offset: 0.2em; }
-      a:hover { color: var(--accent-border); }
+      a { color: var(--link); text-underline-offset: 0.2em; }
+      a:hover { color: var(--link-hover); }
       a:focus-visible { outline: 3px solid var(--accent-border); outline-offset: 4px; border-radius: 5px; }
       .shell { width: min(100% - 40px, 1100px); margin-inline: auto; }
 
@@ -45,7 +47,10 @@
       .brand-mark { display: grid; place-items: center; width: 48px; height: 48px; border: 2px solid var(--green-border); border-radius: 15px; background: #d9f6bc; overflow: hidden; }
       .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
       .brand-name { font-size: 1.32rem; font-weight: 800; letter-spacing: -0.045em; }
-      .header-label { padding: 8px 13px; border: 2px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 0.87rem; font-weight: 650; }
+      .header-nav { display: flex; align-items: center; gap: 8px; }
+      .header-nav a { padding: 8px 13px; border: 2px solid transparent; border-radius: 999px; color: var(--muted); font-size: 0.87rem; font-weight: 650; text-decoration: none; }
+      .header-nav a:hover { color: var(--text); background: var(--surface); }
+      .header-nav a[aria-current="page"] { border-color: var(--border); background: var(--surface); color: var(--text); }
 
       .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr); align-items: center; gap: 20px; min-height: 510px; margin-block: 40px 28px; padding: 48px 54px; border: 2px solid var(--border); border-radius: 32px; background: var(--surface); box-shadow: 0 5px 0 var(--border); overflow: hidden; }
       .hero-content { position: relative; z-index: 1; }
@@ -92,7 +97,7 @@
       .site-footer .shell { display: flex; justify-content: space-between; gap: 20px; }
 
       @media (prefers-color-scheme: dark) {
-        :root { --background: #211e1b; --surface: #2f2b28; --text: #fff8f0; --muted: #c9c1b7; --border: #545454; --accent: #f29a44; --accent-border: #b85c16; --green: #7aa181; --green-border: #456a4c; --chip: #473024; --habit-card: #403625; --analytics-card: #303e31; --diagnostics-card: #483434; --art-backdrop: #4a5f40; }
+        :root { --background: #211e1b; --surface: #2f2b28; --text: #fff8f0; --muted: #c9c1b7; --border: #545454; --accent: #f29a44; --accent-border: #b85c16; --green: #7aa181; --green-border: #456a4c; --link: #b8ddb6; --link-hover: #f29a44; --chip: #473024; --habit-card: #403625; --analytics-card: #303e31; --diagnostics-card: #483434; --art-backdrop: #4a5f40; }
         h1 span, .eyebrow, .section-number, .summary .number { color: var(--accent); }
         .brand-mark { background: #577650; }
       }
@@ -126,8 +131,8 @@
   <body>
     <header class="site-header">
       <div class="shell">
-        <a class="brand" href="#top" aria-label="Fupori, back to top"><span class="brand-mark"><img src="assets/app-icon.png" alt="" width="1024" height="1024"></span><span class="brand-name">fupori</span></a>
-        <span class="header-label">Privacy policy</span>
+        <a class="brand" href="about.html" aria-label="Fupori, about the app"><span class="brand-mark"><img src="assets/app-icon.png" alt="" width="1024" height="1024"></span><span class="brand-name">fupori</span></a>
+        <nav class="header-nav" aria-label="Site navigation"><a href="about.html">About</a><a href="./" aria-current="page">Privacy</a></nav>
       </div>
     </header>
 
@@ -216,6 +221,6 @@
       </div>
     </main>
 
-    <footer class="site-footer"><div class="shell"><span>© 2026 Fupori</span><span>Privacy policy</span></div></footer>
+    <footer class="site-footer"><div class="shell"><span>© 2026 Fupori</span><span><a href="about.html">About Fupori</a></span></div></footer>
   </body>
 </html>
